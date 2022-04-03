@@ -1,18 +1,23 @@
 // 1 uzduotis
-let nSkaicius = 20;
+let nSkaicius = -1;
 if (nSkaicius > 0) {
     console.log('Skaicius geras.');
-} else {
-    console.log('Skaicius neigiamas.');
+} if (nSkaicius ===0) {
+    console.log('Jus pisirinkote skaiciu: 0');
+}   else {
+    console.log('Skaicius blogas.');
 }
 
 // 2. Uzduotis
 
 let nkodas = 2;
-if (nkodas == 1) {
+if (nkodas === 1) {
     console.log('Zalia sviesa - Eikite.');
-} else {
-    console.log('Palaukite');
+} if (nkodas === 2 ) {
+    console.log("Geltona sviesa - Palaukite");
+    } 
+    else {
+    console.log('Raudona sviesa - Sustokite');
 }
 
 
@@ -21,13 +26,13 @@ if (nkodas == 1) {
  var d = 2;
  var k = 8;
  var n = 5;
- if (d * n > k) {
+ if (d * n >= k) {
      console.log('Knygos telpa i dezes');
  }
  var d = 3;
  var k = 18;
  var n = 5;
- if (d * n > k) {
+ if (d * n >= k) {
      console.log('Knygos telpa i dezes');
  } else {
      console.log('Knygos netelpa i dezes');
@@ -35,14 +40,17 @@ if (nkodas == 1) {
 
 // 4. Uzduotis
 
-let a = 4;
-let b = 16;
+let a = 6;
+let b = 6;
 if (a < b) {
     a +=1;
     b -=1
-} else {
+} 
+if (a > b) {
     a -= 1;
     b += 1;
+} else {
+    console.log('Skaiciai yra lygus');
 }
 console.log(a,'ir',b);
 
@@ -72,7 +80,7 @@ if (Math.floor(n4 % 3) == 0 ) {
 
 let menesis = 11;
 const metai = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-console.log('Mensis turi: ', metai[--menesis], 'dienu/-as');
+console.log('Menesis turi: ', metai[--menesis], 'dienu/-as');
 
 
 // 8. Uzduotis
@@ -87,13 +95,12 @@ if (Math.floor(kauliukas % 2) == 0) {
 // 9. Uzduotis
 
 const pirmosOlimpines = 1896;
-let metaiOlimpiniai = 1925;
+let metaiOlimpiniai = 2008;
 let eilesNumeris = 2;
 eilesNumeris =  (metaiOlimpiniai - pirmosOlimpines) / 4;
-console.log('Eiles numeris ', eilesNumeris);
 
 if ((eilesNumeris % 1) === 0) {
-    console.log('Eiles numeris', eilesNumeris);
+    console.log(metaiOlimpiniai, '-ieji yra', eilesNumeris, 'olimpines zaidynes');
 } else {
     console.log('Metai neolimpiniai');
 }
@@ -107,7 +114,6 @@ const pamokosValanda = 9; const pamokosMinute = 5;    // prasideda pamokos
 m1 + m2 >= 60;
     v1++;
     m1 = m2 + m1 - 60; 
-    console.log(v1, 'valandos ir ', m1, 'minuciu');
 
  if (v1 >= pamokosValanda) {
      if (m1 >= pamokosMinute) {
