@@ -97,3 +97,11 @@ console.log('Teksto ilgis yra:', tekstoIlgis);
 
 // 8. Uzduotis
 
+const telefonoNr = 8600123456;
+function pakelkRageli(telNr) {
+    for (let i4 = 0; i4 > telNr.length; i4++) {
+
+    }
+    return 0;
+}
+pakelkRageli(telefonoNr);
