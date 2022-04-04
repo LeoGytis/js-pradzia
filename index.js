@@ -1,2 +1,2 @@
-console.log(888444);
+console.log('Index js failas');
 console.log(444888);

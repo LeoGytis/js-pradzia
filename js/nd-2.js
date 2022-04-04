@@ -2,11 +2,14 @@
 let nSkaicius = -1;
 if (nSkaicius > 0) {
     console.log('Skaicius geras.');
-} if (nSkaicius ===0) {
-    console.log('Jus pisirinkote skaiciu: 0');
-}   else {
-    console.log('Skaicius blogas.');
+} else {
+    if (nSkaicius === 0) {
+        console.log('Jus pisirinkote skaiciu: 0');
+    } else {
+        console.log('Skaicius blogas.');
+      }
 }
+
 
 // 2. Uzduotis
 
