@@ -111,7 +111,7 @@ let v1 = 8; let m1 = 29; // iseina is namu
 const m2 = 23;         // trunka kelione   
 const pamokosValanda = 9; const pamokosMinute = 5;    // prasideda pamokos
 
-m1 + m2 >= 60;
+/* m1 + m2 >= 60;
     v1++;
     m1 = m2 + m1 - 60; 
 
@@ -121,4 +121,20 @@ m1 + m2 >= 60;
      } else {
          console.log('Petras i pamoka neveluos');
      }
+ }
+*/
+
+ let v1minutemis = 0; //valanda minutemis
+ let pamokosValandaMinutemis = 0; // pamokos valanda minutemis
+ let laikoLikutis = 0;
+ 
+ v1minutemis = v1 * 60;
+ pamokosValandaMinutemis = pamokosValanda * 60;
+
+ laikoLikutis = pamokosValandaMinutemis + pamokosMinute - v1minutemis - m1 - m2;
+
+ if (laikoLikutis >= 0) {
+     console.log('Petras i pamoka neveluos');
+ } else {
+     console.log('Petras i pamoka veluos');
  }
