@@ -1,25 +1,99 @@
 // 1. Uzduotis
-const duSkaiciai = [12, 2];
+const pirmas = 18;
+const antras = 9;
 
-function sumuojaSkaicius(skaiciuSarasas) {
-    let skaiciuSuma = 0;
-    skaiciuSuma = skaiciuSarasas [0] + skaiciuSarasas[1];
-    return skaiciuSuma;
+function sumuojaSkaicius(a, b) {
+    let suma = 0;
+    return a + b;
 }
 
-const suma = sumuojaSkaicius(duSkaiciai);
-console.log('Skaiciu suma:', suma);
+console.log('Skaiciu suma:', sumuojaSkaicius (pirmas, antras));
 
 // 2. Uzduotis
 
-function palyginaSkaicius(skaiciuSarasas) {
-    if (skaiciuSarasas[0] > skaiciuSarasas[1]) {
+function palyginaSkaicius(a, b) {
+    if (a > b) {
         console.log('Pirmas skaicius didesnis uz antra');   
     } else {
-        if (skaiciuSarasas[0] < skaiciuSarasas[1]) {
+        if (a < b) {
         console.log('Antras skaicius didenis uz pirma');
     } else console.log('Skaiciai yra lygus');
     }
+    return 0;
+}
+palyginaSkaicius(pirmas, antras);
+
+// 3. Uzduotis
+
+const einamiejiMetai = 2024;
+function priimaMetus(metai) {
+    if (metai % 4 === 0 ) {
+        console.log('Metai yra keliamieji!');
+    } else { 
+        console.log('Metai yra nekialiemiji');
+    }
+    return 0;
+}
+priimaMetus(einamiejiMetai);
+
+// 4. Uzduotis
+
+function skaiciausKvadratas(a) {
+    return a * a;
+}
+const kvadratas = skaiciausKvadratas(pirmas);
+console.log('Skaiciaus kvadratas:', kvadratas);
+
+const skaiciuojaKadrata = (a) => {
+    return a ** 2;
+}
+const kvadratoAtsakymas = skaiciuojaKadrata(antras);
+console.log('Antro skaiciaus kvadratas:', kvadratoAtsakymas);
+
+// 5. Uzduotis
+
+function skaiciuSuma(a) {
+    let suma = 0;
+    if (a > 1) {
+        for ( i1 = 1; i1 < a; i1++) {
+            suma = suma + a;
+        }
+    } else {
+        console.log('Skaiciaus priimti negalime');
+    }
+    return suma;
+}
+const sum1 = skaiciuSuma(pirmas);
+console.log('Visu skaiciu suma:', sum1);
+
+// 6. Uzduotis
+
+function sveikasSkaicius(a) {
+    sumaSveikuSkaiciu = 0;
+    for (i2 = 2; i2 < a; i2++) {
+        if (a % i2 === 0) {
+            sumaSveikuSkaiciu++;
+        }
+    }
+    return sumaSveikuSkaiciu;
+}
+const sveikasSk = sveikasSkaicius(pirmas);
+console.log('Skaicius dalinasi is', sveikasSk, 'skaiciu');
+
+// 7. Uzduotis
+
+const tekstas = 'Eina Petriukas per gatve';
+function priimaTeksta(t1) {
+    let ilgis = 0;
+    for (let i3 = 0; i3 < t1.length; i3++) {
+        ilgis += 1;
+    }
+    console.log(t1);
+    return ilgis;
 }
 
-let palyginimas = palyginaSkaicius(duSkaiciai);
+const tekstoIlgis = priimaTeksta(tekstas);
+console.log('Teksto ilgis yra:', tekstoIlgis);
+
+// 8. Uzduotis
+
