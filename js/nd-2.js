@@ -13,14 +13,16 @@ if (nSkaicius > 0) {
 
 // 2. Uzduotis
 
-let nkodas = 2;
+let nkodas = 3;
 if (nkodas === 1) {
     console.log('Zalia sviesa - Eikite.');
-} if (nkodas === 2 ) {
+} else { 
+    if (nkodas === 2 ) {
     console.log("Geltona sviesa - Palaukite");
     } 
     else {
     console.log('Raudona sviesa - Sustokite');
+    }
 }
 
 
@@ -43,19 +45,21 @@ if (nkodas === 1) {
 
 // 4. Uzduotis
 
-let a = 6;
-let b = 6;
+let a = 13;
+let b = 24;
 if (a < b) {
     a +=1;
     b -=1
-} 
-if (a > b) {
+    console.log(a,'ir',b);
+} else { 
+    if (a > b) {
     a -= 1;
     b += 1;
-} else {
-    console.log('Skaiciai yra lygus');
-}
-console.log(a,'ir',b);
+    console.log(a,'ir',b);
+    } else {
+        console.log(a,'ir', b, 'yra lygus skaiciai');
+    }
+} 
 
 // 5. Uzduotis
 
