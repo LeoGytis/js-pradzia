@@ -25,7 +25,6 @@ palyginaSkaicius(pirmas, antras);
 
 // 3. Uzduotis
 
-const einamiejiMetai = 2024;
 function priimaMetus(metai) {
     if (metai % 4 === 0 ) {
         console.log('Metai yra keliamieji!');
@@ -34,6 +33,8 @@ function priimaMetus(metai) {
     }
     return 0;
 }
+
+const einamiejiMetai = 2024;
 priimaMetus(einamiejiMetai);
 
 // 4. Uzduotis
@@ -97,11 +98,43 @@ console.log('Teksto ilgis yra:', tekstoIlgis);
 
 // 8. Uzduotis
 
-const telefonoNr = 8600123456;
-function pakelkRageli(telNr) {
-    for (let i4 = 0; i4 > telNr.length; i4++) {
+function telefonoNumeris(telNr) {
+   // console.log('(', telNr[0], telNr[2], telNr[3], ')' );
 
+        return `(${telNr[0]}${telNr[1]}${telNr[2]}) ${telNr[3]}${telNr[4]}${telNr[5]}-${telNr[6]}${telNr[7]}${telNr[8]}${telNr[9]}`;
+    }
+
+const telefonoNr = telefonoNumeris('8600123456');
+console.log(telefonoNr); 
+
+// 9. Uzduotis
+
+const tekstas1 = 'Cia labai geras tekstukas';
+const tekstas2 = 'Cia labai geras tekstukas, nu ir kas';
+function lyginaTekstus(t1, t2) {
+    if (t1.length > t2.length) {
+        console.log('Pirmas tekstas yra ilgesnis');
+    } else if (t1.length < t2.length) {
+        console.log('Antras tekstas yra ilgesnis');
+    } else {
+        console.log('Tekstai yra vienodo ilgio');
     }
     return 0;
 }
-pakelkRageli(telefonoNr);
+
+lyginaTekstus(tekstas1, tekstas2);
+
+// 10. Uzduotis
+
+const tekstas3 = 'Sveikas gyvas pasauli, as noriu pamatyti tave';
+function kiekTeksteA(t1) {
+    let kiekA = 0;
+    for (let i10 = 0; i10 < t1.length; i10++) {
+        if (t1[i10] === 'a') {
+            kiekA++;
+        }
+    }
+    return kiekA;
+}
+
+console.log('Tekste yra a raidziu:', kiekTeksteA(tekstas3));
