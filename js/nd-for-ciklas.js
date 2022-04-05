@@ -12,27 +12,28 @@ for (let i2 = 0; i2 < 5; i2++) {
 
 // 3. Uzduotis
 
-let n2 = 0;
 console.log('===', n2);
-for (let i3 = 0; i3 < 4; i3++ ) {
-    n2 += 10;
-    console.log('===', n2);
+for (let i = 0; i <= 40; i += 10) {
+    console.log('===', i);
 }
 
 // 4. Uzduotis
 
-let n3 = 48;
-for (let i4 = 0; i4 < 5; i4++) {
-    n3 = n3 + 1;
-    console.log('-', n3);
+
+for (let i4 = 49; i4 < 54; i4++) {
+    console.log('-', i4);
 }
 
 // 5. Uzduotis
 
-// let random = 0;
-// for (let i5 = 0; i5 < 5; i5++) {
-//     random
-// }
+
+function rand(min, max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}  
+
+for (let i5 = 0; i5 < 5; i5++) {
+ 
+}
 
 // 6. Uzduotis
 
@@ -45,9 +46,9 @@ for (let i6 = 0; i6 < 20; i6++) {
 // 7. Uzduotis
 
 let n7 = 8;
-let ats7 = 0;
+
 for (let i7 = 1; i7 <= 10; i7++) {
-    ats7 = i7 * n7;
+    let ats7 = i7 * n7;
     console.log(i7, '*', n7, '=', ats7);
 }
 
