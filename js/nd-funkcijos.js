@@ -3,7 +3,6 @@ const pirmas = 18;
 const antras = 9;
 
 function sumuojaSkaicius(a, b) {
-    let suma = 0;
     return a + b;
 }
 
@@ -14,28 +13,25 @@ console.log('Skaiciu suma:', sumuojaSkaicius (pirmas, antras));
 function palyginaSkaicius(a, b) {
     if (a > b) {
         console.log('Pirmas skaicius didesnis uz antra');   
-    } else {
-        if (a < b) {
+    } else if (a < b) {
         console.log('Antras skaicius didenis uz pirma');
+        
     } else console.log('Skaiciai yra lygus');
-    }
-    return 0;
 }
+
 palyginaSkaicius(pirmas, antras);
 
 // 3. Uzduotis
 
 function priimaMetus(metai) {
-    if (metai % 4 === 0 ) {
+    if (metai % 4 === 0 && metai % 100 !== 0 || metai % 400 === 0) {
         console.log('Metai yra keliamieji!');
     } else { 
         console.log('Metai yra nekialiemiji');
-    }
-    return 0;
+    }   
 }
 
-const einamiejiMetai = 2024;
-priimaMetus(einamiejiMetai);
+priimaMetus(2024);
 
 // 4. Uzduotis
 
@@ -56,7 +52,7 @@ console.log('Antro skaiciaus kvadratas:', kvadratoAtsakymas);
 function skaiciuSuma(a) {
     let suma = 0;
     if (a > 1) {
-        for ( i1 = 1; i1 < a; i1++) {
+        for ( let i = 1; i <= a; i++) {
             suma = suma + a;
         }
     } else {
@@ -71,8 +67,8 @@ console.log('Visu skaiciu suma:', sum1);
 
 function sveikasSkaicius(a) {
     sumaSveikuSkaiciu = 0;
-    for (i2 = 2; i2 < a; i2++) {
-        if (a % i2 === 0) {
+    for (let i = 2; i < a; i++) {
+        if (a % i === 0) {
             sumaSveikuSkaiciu++;
         }
     }
@@ -83,25 +79,17 @@ console.log('Skaicius dalinasi is', sveikasSk, 'skaiciu');
 
 // 7. Uzduotis
 
-const tekstas = 'Eina Petriukas per gatve';
 function priimaTeksta(t1) {
-    let ilgis = 0;
-    for (let i3 = 0; i3 < t1.length; i3++) {
-        ilgis += 1;
-    }
-    console.log(t1);
-    return ilgis;
+    console.log(t1, 'Simboliu:=', t1.length);
 }
 
+const tekstas = 'Eina Petriukas per gatve';
 const tekstoIlgis = priimaTeksta(tekstas);
-console.log('Teksto ilgis yra:', tekstoIlgis);
 
 // 8. Uzduotis
 
 function telefonoNumeris(telNr) {
-   // console.log('(', telNr[0], telNr[2], telNr[3], ')' );
-
-        return `(${telNr[0]}${telNr[1]}${telNr[2]}) ${telNr[3]}${telNr[4]}${telNr[5]}-${telNr[6]}${telNr[7]}${telNr[8]}${telNr[9]}`;
+           return `(${telNr[0]}${telNr[1]}${telNr[2]}) ${telNr[3]}${telNr[4]}${telNr[5]}-${telNr[6]}${telNr[7]}${telNr[8]}${telNr[9]}`;
     }
 
 const telefonoNr = telefonoNumeris('8600123456');
@@ -119,7 +107,6 @@ function lyginaTekstus(t1, t2) {
     } else {
         console.log('Tekstai yra vienodo ilgio');
     }
-    return 0;
 }
 
 lyginaTekstus(tekstas1, tekstas2);
@@ -129,8 +116,8 @@ lyginaTekstus(tekstas1, tekstas2);
 const tekstas3 = 'Sveikas gyvas pasauli, as noriu pamatyti tave';
 function kiekTeksteA(t1) {
     let kiekA = 0;
-    for (let i10 = 0; i10 < t1.length; i10++) {
-        if (t1[i10] === 'a') {
+    for (let i = 0; i < t1.length; i++) {
+        if (t1[i] === 'a') {
             kiekA++;
         }
     }
