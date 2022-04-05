@@ -4,8 +4,8 @@ if (nSkaicius > 0) {
     console.log('Skaicius geras.');
 } else if (nSkaicius === 0) {
     console.log('Jus pisirinkote skaiciu: 0');
-    } else {
-        console.log('Skaicius blogas.');
+} else {
+    console.log('Skaicius blogas.');
 }
 
 
@@ -16,9 +16,8 @@ if (nkodas === 1) {
     console.log('Zalia sviesa - Eikite.');
 } else if (nkodas === 2 ) {
     console.log("Geltona sviesa - Palaukite");    
-    } 
-    else {
-    console.log('Raudona sviesa - Sustokite');
+} else {
+   console.log('Raudona sviesa - Sustokite');
 }
 
 
@@ -63,15 +62,15 @@ let c = 50;
 let p = 20;
 let m = 0; //centu likutis
 console.log('Saulius nusipirks', Math.floor(c / p), 'porcijas');
-m = 50 - Math.floor(c / p) * p;
+m = c % p;
 console.log('Liks centu:', m);
 console.log('--------------');
 
 // 6. Uzduotis
 
-let n6 = 8;
+let n6 = 6;
 
-if (Math.floor(n6 % 3) === 0 ) {
+if (n6 % 3 === 0 ) {
     console.log('Trikampi sudelioti galima');
 } else {
     console.log('Trikampio sudelioti negalima');
@@ -87,7 +86,7 @@ console.log('Menesis turi: ', metai[--menesis], 'dienu/-as');
 // 8. Uzduotis
 
 let kauliukas = 4;
-if (Math.floor(kauliukas % 2) == 0) {
+if ( kauliukas % 2  === 0) {
     console.log('Kambari tvarko vyresnelis');
 } else {
     console.log('Kambari tvarko jaunelis');
@@ -99,9 +98,10 @@ const pirmosOlimpines = 1896;
 let metaiOlimpiniai = 2008;
 let eilesNumeris = 2;
 
-eilesNumeris =  (metaiOlimpiniai - pirmosOlimpines) / 4;
 
-if ((eilesNumeris % 1) === 0) {
+
+if ( metaiOlimpiniai % 4 === 0) {
+    eilesNumeris =  (metaiOlimpiniai - pirmosOlimpines) / 4 + 1;
     console.log(metaiOlimpiniai, '-ieji yra', eilesNumeris, 'olimpines zaidynes');
 } else {
     console.log('Metai neolimpiniai');
@@ -133,7 +133,7 @@ const pamokosValanda = 9; const pamokosMinute = 5;    // prasideda pamokos
  v1minutemis = v1 * 60;
  pamokosValandaMinutemis = pamokosValanda * 60;
 
- laikoLikutis = pamokosValandaMinutemis + pamokosMinute - v1minutemis - m1 - m2;
+ laikoLikutis = pamokosValandaMinutemis + pamokosMinute - v1 * 60 - m1 - m2;
 
  if (laikoLikutis >= 0) {
      console.log('Petras i pamoka neveluos');
