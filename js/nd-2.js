@@ -1,29 +1,26 @@
 // 1 uzduotis
-let nSkaicius = -1;
+let nSkaicius = 2;
 if (nSkaicius > 0) {
     console.log('Skaicius geras.');
-} else {
-    if (nSkaicius === 0) {
-        console.log('Jus pisirinkote skaiciu: 0');
+} else if (nSkaicius === 0) {
+    console.log('Jus pisirinkote skaiciu: 0');
     } else {
         console.log('Skaicius blogas.');
-      }
 }
 
 
 // 2. Uzduotis
 
-let nkodas = 3;
+let nkodas = 1;
 if (nkodas === 1) {
     console.log('Zalia sviesa - Eikite.');
-} else { 
-    if (nkodas === 2 ) {
-    console.log("Geltona sviesa - Palaukite");
+} else if (nkodas === 2 ) {
+    console.log("Geltona sviesa - Palaukite");    
     } 
     else {
     console.log('Raudona sviesa - Sustokite');
-    }
 }
+
 
 
 // 3. Uzduotis 
@@ -51,15 +48,14 @@ if (a < b) {
     a +=1;
     b -=1
     console.log(a,'ir',b);
-} else { 
-    if (a > b) {
+} else if (a > b) {
     a -= 1;
     b += 1;
-    console.log(a,'ir',b);
+    console.log(a,'ir',b); 
     } else {
         console.log(a,'ir', b, 'yra lygus skaiciai');
-    }
-} 
+}
+
 
 // 5. Uzduotis
 
@@ -69,15 +65,13 @@ let m = 0; //centu likutis
 console.log('Saulius nusipirks', Math.floor(c / p), 'porcijas');
 m = 50 - Math.floor(c / p) * p;
 console.log('Liks centu:', m);
+console.log('--------------');
 
 // 6. Uzduotis
 
-let n6 = 6;
-let n4 = 4;
-if (Math.floor(n6 % 3) == 0 ) {
-    console.log('Trikampi sudelioti galima');
-}
-if (Math.floor(n4 % 3) == 0 ) {
+let n6 = 8;
+
+if (Math.floor(n6 % 3) === 0 ) {
     console.log('Trikampi sudelioti galima');
 } else {
     console.log('Trikampio sudelioti negalima');
@@ -92,7 +86,7 @@ console.log('Menesis turi: ', metai[--menesis], 'dienu/-as');
 
 // 8. Uzduotis
 
-let kauliukas = 6;
+let kauliukas = 4;
 if (Math.floor(kauliukas % 2) == 0) {
     console.log('Kambari tvarko vyresnelis');
 } else {
@@ -104,6 +98,7 @@ if (Math.floor(kauliukas % 2) == 0) {
 const pirmosOlimpines = 1896;
 let metaiOlimpiniai = 2008;
 let eilesNumeris = 2;
+
 eilesNumeris =  (metaiOlimpiniai - pirmosOlimpines) / 4;
 
 if ((eilesNumeris % 1) === 0) {
