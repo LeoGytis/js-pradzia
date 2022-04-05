@@ -54,3 +54,30 @@ for (let i = 1; i <= n8; i++) {
     let cm = 2.54 * i;
     console.log(i, 'coliai =', cm, 'cm');
 }
+
+// 9. Uzduotis
+
+function bankas(nmetai) {
+    let indelis = 100;
+    let palukanos = 2;
+    for (let i = 1; i <= nmetai; i++) { 
+        indelis += indelis * 0.02;       // efektyvi palukanu norma
+        palukanos = palukanos * 1.02;
+        console.log(i, '-ieji metai', Math.round(palukanos * 1000) / 1000, 'palukanos', Math.round(indelis * 100) / 100, 'indelis');
+    }
+}
+
+console.log(bankas(5));
+
+// 10. Uzduotis
+
+let metai = 0;
+ 
+for (let i = 0; i <= 2022; i++) {
+    metai++;
+    if (metai % 4 === 0 || metai % 400 === 0) {
+        console.log(metai, 'Metai yra keliamieji!');
+    } 
+}
+
+
