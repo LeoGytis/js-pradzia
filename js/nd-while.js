@@ -1,22 +1,8 @@
-
-// WHILE
-
-const pazymiai = [10, 2, 8, 4, 6];
-console.log('-----------');
-let suma = 0;
-let i = 0;
-while (i < pazymiai.length) {
-    const pazymys = pazymiai[i];
-    suma += pazymys;
-    console.log(`${i} pazymys ${pazymys} [${suma}]`);
-    i++;
-}
-
 // 1 UZDUOTIS
 
 let suma1 = 0;
 
-while (suma1 < 100) {
+while (suma1 <= 100) {
     suma1 += Math.floor (Math.random() * (10 - 1) + 1);
     console.log('Suma lygi', suma1);
 }
@@ -40,9 +26,9 @@ while (dalinas !== 0) {
 
 // 3 UZDUOTIS
 
-const m = 17; //skyriu skaicius
-let d = 0; //dienu skaicius
-let s = 0; //vidutiniskai perskaityti skyriai per diena
+const m = 17;       //skyriu skaicius
+let d = 0;          //dienu skaicius
+let s = 0;          //vidutiniskai perskaityti skyriai per diena
 let skyriusk = 0;
 
 while (skyriusk < m) {
@@ -60,3 +46,20 @@ console.log('Vid/diena perskaite skyriaus:', Math.round(s * 100) / 100);
 //     console.log('Tadas perskaito skyriu per diena', pskyriai);
 //     console.log('diena kuri skaito', diena);
 // }
+
+// 4 UZDUOTIS
+
+let number = 0;
+
+while (number !== 5) {
+    number = Math.floor (Math.random() * (10 - 1) + 1);
+    console.log('Skaicius', number);
+}
+
+// 5 UZDUOTIS
+
+let nr = 0;
+while ((nr !== 5) && (nr !== 7)) {
+    nr = Math.floor (Math.random() * (10 - 1) + 1);
+    console.log('Skaicius 5 arba 7', nr);
+}
