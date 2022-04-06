@@ -78,19 +78,29 @@ console.log(daugyba(2, 200));
 
 console.log('3 UZDUOTIS -----------');
 
-function skaitmenuKiekisSkaiciuje(a) {
-    let atmintis = '';
-    if (typeof a !== 'number') {
+function skaitmenuKiekisSkaiciuje(num) {
+    
+    
+    if (typeof num !== 'number') {
         console.log('Pateikta netinkamo tipo reiksme');
-        } 
-        atmintis = a.length;
-        return console.log('Rezultatas:', atmintis);    
+        }
+    if (typeof num === NaN) { // ?????????
+        console.log('Not a Number');
+    }
+
+    if (typeof num === 'number') {
+        const numAsString = '' + num;
+        let size = numAsString.length;
+        return console.log('Rezultatas:', size);    
+    }
+    
+      
 }
 
-skaitmenuKiekisSkaiciuje('ananasass');
 skaitmenuKiekisSkaiciuje(5);
-// skaitmenuKiekisSkaiciuje(781);
-// skaitmenuKiekisSkaiciuje(3760123456);
-// skaitmenuKiekisSkaiciuje(true);
-
+skaitmenuKiekisSkaiciuje(781);
+skaitmenuKiekisSkaiciuje(3760123456);
+skaitmenuKiekisSkaiciuje(true);
+skaitmenuKiekisSkaiciuje('asd');
+skaitmenuKiekisSkaiciuje(NaN);
 
