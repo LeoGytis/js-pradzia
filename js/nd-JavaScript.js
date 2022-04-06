@@ -95,34 +95,36 @@ if (a <= b) {
 // 2. Isvesti teksto tipo kintamuju ilgius
 const suo = 'Vladas';
 const kate = 'Stase';
-console.log(suo + ' ir ' + kate);
+console.log('2 Isvesti teksto tipo kintamuju ilgius');
+console.log('--------------------------------------');
+console.log(suo.length + ' ir ' + kate.length);
 
-if (suo > kate) {
+if (suo.length > kate.length) {
     console.log('Pomidoras');
 } else {
     console.log('Bandykite kita karta');
 }
-if (suo < kate) {
+if (suo.length < kate.length) {
     console.log('Pomidoras');
 } else {
     console.log('Bandykite kita karta');
 }
-if (suo == kate) {
+if (suo.length == kate.length) {
     console.log('Pomidoras');
 } else {
     console.log('Bandykite kita karta');
 }
-if (suo != kate) {
+if (suo.length != kate.length) {
     console.log('Pomidoras');
 } else {
     console.log('Bandykite kita karta');
 }
-if (suo >= kate) {
+if (suo.length >= kate.length) {
     console.log('Pomidoras');
 } else {
     console.log('Bandykite kita karta');
 }
-if (suo <= kate) {
+if (suo.length <= kate.length) {
     console.log('Pomidoras');
 } else {
     console.log('Bandykite kita karta');

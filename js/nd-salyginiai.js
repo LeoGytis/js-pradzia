@@ -113,19 +113,6 @@ let v1 = 8; let m1 = 29; // iseina is namu
 const m2 = 23;         // trunka kelione   
 const pamokosValanda = 9; const pamokosMinute = 5;    // prasideda pamokos
 
-/* m1 + m2 >= 60;
-    v1++;
-    m1 = m2 + m1 - 60; 
-
- if (v1 >= pamokosValanda) {
-     if (m1 >= pamokosMinute) {
-         console.log('Petras i pamoka paveluos');
-     } else {
-         console.log('Petras i pamoka neveluos');
-     }
- }
-*/
-
  let v1minutemis = 0; //valanda minutemis
  let pamokosValandaMinutemis = 0; // pamokos valanda minutemis
  let laikoLikutis = 0;
