@@ -12,13 +12,13 @@ class dog {
     sit() {
        this.sedi = true;
        if (this.sedi) {
-           console.log('As suo ir as sedziu');
+           console.log('I am sitting');
        }
     }
 
     stand() {
         this.sedi = false;
-        console.log('As suo ir as vaikstau');
+        console.log('I am standing');
     }
 }
 
@@ -28,8 +28,10 @@ console.log(dog1.name, ':', dog1.sound);
 console.log('Hi, Im a', dog1.species, 'and my name is', dog1.name);
 console.log('My color is', dog1.furColor);
 console.log('My eyes are', dog1.eyeColor);
-console.log('Right now I am:');
+dog1.stand();
+console.log('Right now:');
 
 dog1.sit();
 dog1.stand();
 
+console.log(dog1.furColor);

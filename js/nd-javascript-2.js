@@ -81,20 +81,17 @@ console.log('3 UZDUOTIS -----------');
 function skaitmenuKiekisSkaiciuje(num) {
     
     
-    if (typeof num !== 'number') {
+    if (typeof num !== 'number' 
+        || !isFinite(num)) {
         console.log('Pateikta netinkamo tipo reiksme');
         }
-    if (typeof num === NaN) { // ?????????
+    if ('' + num === 'NaN') {
         console.log('Not a Number');
-    }
-
-    if (typeof num === 'number') {
+    } else if (typeof num === 'number') {
         const numAsString = '' + num;
         let size = numAsString.length;
         return console.log('Rezultatas:', size);    
-    }
-    
-      
+      }
 }
 
 skaitmenuKiekisSkaiciuje(5);
@@ -104,3 +101,33 @@ skaitmenuKiekisSkaiciuje(true);
 skaitmenuKiekisSkaiciuje('asd');
 skaitmenuKiekisSkaiciuje(NaN);
 
+console.log('4 UZDUOTIS -----------');
+
+function didziausisasSkaiciusSarase(num) {
+    if (num.length === 0) {
+         console.log('ERROR: sarasas negali buti tuscias');
+    }
+
+
+    let biggestNr = -Infinity;
+    for (let i = 0; i <= num.length; i++) {
+        const didNr = num[i];
+
+        if (biggestNr < didNr ) {
+            biggestNr = didNr;
+        }
+    }
+   console.log('Didziausias skaicius sarase', biggestNr);
+}
+
+const nr1 = [1];
+const nr2 = [1, 2, 3];
+const nr3 = [-5, 78, 14, 0, 18];
+const nr4 = [69, 69, 69, 69, 66];
+const nr5 = [-1, -2, -3, -4, -5];
+const nr6 = [];
+didziausisasSkaiciusSarase(nr1);
+didziausisasSkaiciusSarase(nr3);
+didziausisasSkaiciusSarase(nr4);
+didziausisasSkaiciusSarase(nr5);
+didziausisasSkaiciusSarase(nr6);
