@@ -49,10 +49,6 @@ for (let i = 0; i < 10; i++){
 console.log(raidziuMasyvas);
 console.log('Raidziu A',kiekA);
 
-
-
-
-
 // 8 UZDUOTIS
 function lygineSuma(a, b) {
     let skaiciuSuma = 0;
@@ -83,12 +79,7 @@ lygineSuma(5, 10)
 lygineSuma(5, [10, 2, 1])
 lygineSuma([5, 5, 6, 5], [10, 2, 1, 5])
 
-  
-  
-
-
-
-// 10 UZDUOTIS
+// 10 UZDUOTIS commitui
 
 function telefonoNumeris(telNr) {
     let numeris = 0;
