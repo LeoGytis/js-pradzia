@@ -61,7 +61,7 @@ let kiekB = 0;
 let kiekC = 0;
 let kiekD = 0;
 
-for (let i7 = 0; i7 < 100; i7++){
+for (let i7 = 0; i7 < 10; i7++){
     raidziuMasyvas.push(abecele[random(0,3)]);
 }
 for (let i77 = 0; i77 <= raidziuMasyvas.length; i77++) {
@@ -92,45 +92,58 @@ console.log('Raidziu D',kiekD);
 
 // 8 UZDUOTIS
 function lygineSuma(a, b) {
-let skaiciuSuma = 0;
-let masyvuSuma = 0;
-    if (typeof a === 'number' && typeof b == 'number') {
-        const skaiciuSuma = a + b;
+    let masyvuSuma = 0;
+    if (typeof a === 'number' && typeof b === 'number') {
+     let skaiciuSuma = a + b;
+     if (skaiciuSuma % 2 === 0) {
+        console.log('Skaiciu suma', skaiciuSuma);        
+    } else { console.log('Skaiciu suma nelygine');
+       }
+    }
+       
+    else if (Array.isArray(a) && Array.isArray(b)) {
+        masyvuSuma = a.length + b.length;
+        if (masyvuSuma % 2 === 0) {
+            console.log('Masyvu ilgiu suma:', masyvuSuma);
+        } 
+        else {
+            console.log('Masyvu suma nelygine');
+        }
+    } else {
+        console.log('Skaiciai nera masyvai');
     }    
-    if (skaiciuSuma % 2 !== 0) {
-        console.log('Skaiciu suma nelygine');
-    } else console.log('Skaiciu suma', skaiciuSuma);
-    if (typeof a !== typeof b) {
-        console.log('Skaiciai nesutampa');
-    }   
-            
-    // else if ( Array.isArray(a) && Array.isArray(b) ) {
-    //     let masyvuSuma = a.length + b.length;
-    // }
-    // if (masyvuSuma % 2 !== 0) {
-    //     console.log('Masyvu suma nelygine');
-    // } else 
-    //     console.log('Masyvu ilgiu suma:', masyvuSuma);
-}
+}    
+
 
 lygineSuma(4, 4)
 lygineSuma(5, 10)
+lygineSuma(5, 13)
+console.log('--------');
 lygineSuma(5, [10, 2, 1])
 lygineSuma([5, 5, 6, 5], [10, 2, 1, 5])
+lygineSuma([5, 5, 6, 5], [10, 2, 1])
 
 
+// 9 UZDUOTIS
 
 
 // 10 UZDUOTIS commitui
 
 function telefonoNumeris(telNr) {
-    let numeris = 0;
-    for (let i = 0; i < telNr.length; i++){
-        numeris[i] = telNr[i];
+    if (!Array.isArray(telNr)) {
+        return 'Kintamasis nėra masyvas';
     }
-    return `(${numeris[0]}${numeris[1]}${numeris[2]})
-     ${numeris[3]}${numeris[4]}${numeris[5]}-
-     ${numeris[6]}${numeris[7]}${numeris[8]}${numeris[9]}`;
+    if (telNr.length !== 10) {
+        return 'Masyvas yra netinkamo ilgio';
+    }
+    for (let i10 = 0; i10 < telNr.length; i10++){
+        if (typeof telNr[i10] !== 'number') {
+            return 'Masyvo reiksmes turi buti skaiciai';
+        }
+    }
+    return `(${telNr[0]}${telNr[1]}${telNr[2]}) ${telNr[3]}${telNr[4]}${telNr[5]}-${telNr[6]}${telNr[7]}${telNr[8]}${telNr[9]}`;
 }
 
-console.log(telefonoNumeris(860512345));
+console.log(telefonoNumeris([8, 6, 0, 5, 1, 2, 3,]));
+console.log(telefonoNumeris([8, 6, 0, 5, 1, 2, 3, 8, 9, 5]));
+console.log(telefonoNumeris([8, 6, 0, 5, 1, 2, 3, 'c', 9, 5]));
